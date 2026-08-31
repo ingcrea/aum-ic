@@ -3,21 +3,38 @@
     "title": "AUM-IC | Arquitectura Cósmica",
     "description": "Boilerplate Oficial de la Arquitectura de Universos Multidimensionales por Ingeniería Creativa."
   },
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "docs": "Documentación",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "rights": "© 2026 Ingeniería Creativa. Todos los derechos reservados bajo AUM-IC."
+  },
   "hero": {
     "badge": "Estándar Enterprise 2026",
     "title": "Arquitectura AUM-IC",
     "subtitle": "Universo Multidimensional de Ingeniería Creativa",
     "description": "El marco de trabajo definitivo para Astro. Sin clases basura, sin código espagueti. 100% SCSS, Diseño Atómico y MVC.",
-    "cta_primary": "Leer Documentación",
-    "cta_secondary": "GitHub"
+    "cta_primary": "Explorar Anatomía",
+    "cta_secondary": "Ver Código"
   },
   "features": {
     "title": "La Escala Cósmica",
-    "atom_title": "1. Átomos",
-    "atom_desc": "La unidad indivisible. Botones, Inputs, Textos.",
-    "planet_title": "5. Planetas",
-    "planet_desc": "Grandes secciones que estructuran la cuadrícula web.",
-    "galaxy_title": "7. Galaxias (MVC)",
-    "galaxy_desc": "Páginas enrutadoras que consumen la base de datos."
+    "f1_title": "1. Átomos",
+    "f1_desc": "La unidad indivisible. Botones, Inputs, Textos aislados con SCSS.",
+    "f2_title": "2. Moléculas",
+    "f2_desc": "La unión de dos o más átomos (Ej: Un campo de formulario).",
+    "f3_title": "3. Células",
+    "f3_desc": "Contenedores funcionales (Ej: Formulario de Contacto completo).",
+    "f4_title": "4. Seres Vivos",
+    "f4_desc": "Organismos altamente complejos, independientes e interactivos.",
+    "f5_title": "5. Planetas",
+    "f5_desc": "Grandes secciones que estructuran la cuadrícula web (Headers, Footers).",
+    "f6_title": "6. Sistemas Solares",
+    "f6_desc": "Plantillas maestras (Layouts) que inyectan el SEO, GTM y multi-idioma.",
+    "f7_title": "7. Galaxias (MVC)",
+    "f7_desc": "Controladores finales que consumen el Modelo (BD) e inyectan la Vista."
   }
 }

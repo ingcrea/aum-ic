@@ -1,12 +1,4 @@
 ---
-/**
- * 🌌 TIPO: GALAXIA (Controlador)
- * 🏷️ NOMBRE: HomePage (index)
- * 
- * 🎯 PROPÓSITO:
- * Página de aterrizaje del Boilerplate AUM-IC.
- */
-
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroWelcome from '@planets/HeroWelcome.astro';
 import { useTranslations } from '@i18n/utils';
@@ -14,29 +6,71 @@ import { useTranslations } from '@i18n/utils';
 const t = useTranslations('es');
 ---
 
-<BaseLayout 
-  title={t('site.title')} 
-  description={t('site.description')}
->
+<BaseLayout title={t('site.title')} description={t('site.description')}>
   <main>
     <HeroWelcome />
     
-    <section id="docs" style="max-width: 800px; margin: 4rem auto; padding: 2rem; color: #fff;">
-      <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center; color: #60a5fa;">Estructura del Universo</h2>
-      <div style="display: grid; gap: 1.5rem;">
-        <div style="background: #1e1e2f; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #3b82f6;">
-          <h3>{t('features.atom_title')}</h3>
-          <p style="color: #94a3b8; margin-top: 0.5rem;">{t('features.atom_desc')}</p>
+    <section id="docs" class="docs-section">
+      <h2 class="docs-title">{t('features.title')}</h2>
+      
+      <div class="docs-grid">
+        <div class="docs-card">
+          <h3>{t('features.f1_title')}</h3><p>{t('features.f1_desc')}</p>
         </div>
-        <div style="background: #1e1e2f; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #a855f7;">
-          <h3>{t('features.planet_title')}</h3>
-          <p style="color: #94a3b8; margin-top: 0.5rem;">{t('features.planet_desc')}</p>
+        <div class="docs-card">
+          <h3>{t('features.f2_title')}</h3><p>{t('features.f2_desc')}</p>
         </div>
-        <div style="background: #1e1e2f; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #10b981;">
-          <h3>{t('features.galaxy_title')}</h3>
-          <p style="color: #94a3b8; margin-top: 0.5rem;">{t('features.galaxy_desc')}</p>
+        <div class="docs-card">
+          <h3>{t('features.f3_title')}</h3><p>{t('features.f3_desc')}</p>
+        </div>
+        <div class="docs-card">
+          <h3>{t('features.f4_title')}</h3><p>{t('features.f4_desc')}</p>
+        </div>
+        <div class="docs-card">
+          <h3>{t('features.f5_title')}</h3><p>{t('features.f5_desc')}</p>
+        </div>
+        <div class="docs-card">
+          <h3>{t('features.f6_title')}</h3><p>{t('features.f6_desc')}</p>
+        </div>
+        <div class="docs-card docs-card--galaxy">
+          <h3>{t('features.f7_title')}</h3><p>{t('features.f7_desc')}</p>
         </div>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<style lang="scss">
+  .docs-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem;
+  }
+  .docs-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #f8fafc;
+  }
+  .docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .docs-card {
+    background: #1e1e2f;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.2s;
+    
+    &:hover { transform: translateY(-5px); }
+    h3 { color: #fff; margin-bottom: 0.5rem; }
+    p { color: #94a3b8; line-height: 1.5; }
+    
+    &--galaxy {
+      border-left: 4px solid #a855f7;
+      grid-column: 1 / -1; 
+    }
+  }
+</style>
