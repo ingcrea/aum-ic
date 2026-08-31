@@ -1,12 +1,54 @@
 {
   "site": {
-    "title": "Creative Engineering",
-    "description": "Elite software development and corporate web design."
+    "title": "AUM-IC | Cosmic Architecture",
+    "description": "Official Boilerplate of the Multidimensional Universe Architecture by Creative Engineering."
   },
   "nav": {
     "home": "Home",
-    "about": "About Us",
-    "services": "Services",
+    "about": "About",
+    "docs": "Docs",
     "contact": "Contact"
+  },
+  "footer": {
+    "rights": "© 2026 Creative Engineering. All rights reserved under AUM-IC."
+  },
+  "hero": {
+    "badge": "Enterprise Standard 2026",
+    "title": "AUM-IC Architecture",
+    "subtitle": "Multidimensional Universe by Creative Engineering",
+    "description": "The ultimate framework for Astro. No trash classes, no spaghetti code. 100% SCSS, Atomic Design, and MVC.",
+    "cta_primary": "Explore Anatomy",
+    "cta_secondary": "View Code"
+  },
+  "features": {
+    "title": "The Cosmic Scale",
+    "f1_title": "⚛️ Level 1: Atoms (1-atoms/)",
+    "f1_def": "The smallest, indivisible visual unit.",
+    "f1_ex": "<Button />, <TextInput />, <Label />, <SvgIcon />.",
+    "f1_rule": "100% ignorant. They do not know what page they are on, do not make web requests, and do not translate languages. They only receive visual data (props) and render it. They have their own isolated SCSS.",
+    "f2_title": "🧬 Level 2: Molecules (2-molecules/)",
+    "f2_def": "The union of two or more atoms to build a component with purpose.",
+    "f2_ex": "<FormField /> (Combines Label + TextInput + ErrorText).",
+    "f2_rule": "They begin to have interface encapsulation, but still possess no complex business logic.",
+    "f3_title": "🦠 Level 3: Cells (3-cells/)",
+    "f3_def": "Complete functional containers composed of molecules and atoms.",
+    "f3_ex": "<ContactForm /> (Form with visual validation and submit button).",
+    "f3_rule": "They handle user events (clicks, submits) but delegate deep processing to higher layers.",
+    "f4_title": "🦖 Level 4: Organisms (4-organisms/)",
+    "f4_def": "Complex and highly independent interactive blocks.",
+    "f4_ex": "<SubscriptionBlock /> (Marketing text, promo image, and the form Cell).",
+    "f4_rule": "Software pieces that can be moved from page to page and continue functioning as an autonomous organism.",
+    "f5_title": "🌍 Level 5: Planets (5-planets/)",
+    "f5_def": "Large macro-sections defining the structural division of a page.",
+    "f5_ex": "<MainHeader />, <HeroSection />, <ServicesGrid />.",
+    "f5_rule": "The \"home\" for Organisms and Cells. They structure the general grid (Flexbox) of the section.",
+    "f6_title": "☀️ Level 6: Solar Systems (layouts/)",
+    "f6_def": "Master templates or the gravitational skeleton.",
+    "f6_ex": "<BaseLayout />, <DashboardLayout />.",
+    "f6_rule": "The only files authorized to contain root HTML tags (<html>, <head>, <body>). They handle SEO, GTM, and open the slot for Galaxies.",
+    "f7_title": "🌌 Level 7: Galaxies (pages/)",
+    "f7_def": "Final project routes acting as the Controller (MVC).",
+    "f7_ex": "index.astro, contact.astro.",
+    "f7_rule": "Their sole job is to receive the web request, call the Model for pure data, and pass it to the View (Solar Systems)."
   }
 }

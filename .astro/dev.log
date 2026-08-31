@@ -1,13 +1,9 @@
 {"message":"connected.","label":"vite","level":"info"}
 {"message":"Generated 1ms","label":"types","level":"info"}
 {"message":"connected.","label":"vite","level":"info"}
-{"message":" astro  v7.2.9 ready in 3052 ms\n┃ Local    http://localhost:4321/\n┃ Network  http://192.168.110.73:4321/\n           http://192.168.110.73:4321/","label":"SKIP_FORMAT","level":"info"}
+{"message":" astro  v7.2.9 ready in 2510 ms\n┃ Local    http://localhost:4321/\n┃ Network  http://192.168.110.73:4321/\n           http://192.168.110.73:4321/","label":"SKIP_FORMAT","level":"info"}
 {"message":"watching for file changes...","label":null,"level":"info"}
-{"message":"[200] / 81ms","label":null,"level":"info"}
-{"message":"[200] / 9ms","label":null,"level":"info"}
-{"message":"/src/components/5-planets/MainHeader.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
-{"message":"[200] / 29ms","label":null,"level":"info"}
-{"message":"[200] / 10ms","label":null,"level":"info"}
-{"message":"/src/components/5-planets/MainHeader.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
-{"message":"[200] / 40ms","label":null,"level":"info"}
-{"message":"/src/components/5-planets/MainHeader.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] / 79ms","label":null,"level":"info"}
+{"message":"[200] /en 17ms","label":null,"level":"info"}
+{"message":"[200] /en 10ms","label":null,"level":"info"}
+{"message":"[200] /en 44ms","label":null,"level":"info"}
