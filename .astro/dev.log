@@ -52,3 +52,9 @@
 {"message":"/src/components/1-atoms/LangSwitcher.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
 {"message":"[200] / 43ms","label":null,"level":"info"}
 {"message":"/src/components/5-planets/HeroWelcome.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] /en 12ms","label":null,"level":"info"}
+{"message":"[200] / 14ms","label":null,"level":"info"}
+{"message":"[200] /en 6ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"/src/components/1-atoms/LangSwitcher.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] / 21ms","label":null,"level":"info"}
