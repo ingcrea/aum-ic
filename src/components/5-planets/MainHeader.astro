@@ -5,7 +5,7 @@ const t = useTranslations(Astro.currentLocale || 'es');
 ---
 
 <header class="planet-header">
-  <nav class="nav-pill">
+  <nav class="nav-container">
     <!-- Logo Oficial IngCrea -->
     <a href="#" class="brand-link">
       <img src="/logo-ic.webp" alt="Ingeniería Creativa" class="logo-image" />
@@ -27,34 +27,27 @@ const t = useTranslations(Astro.currentLocale || 'es');
 
 <style lang="scss">
   .planet-header {
-    position: fixed;
-    top: 2rem;
+    position: sticky;
+    top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
     z-index: 9999;
-    padding: 0 1.5rem;
-    pointer-events: none;
+    
+    background: rgba(15, 15, 18, 0.75);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   }
 
-  .nav-pill {
-    pointer-events: auto;
+  .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3.5rem;
-    
-    background: rgba(18, 18, 20, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
   }
 
   .brand-link {
@@ -66,7 +59,7 @@ const t = useTranslations(Astro.currentLocale || 'es');
     &:hover { opacity: 0.8; }
     
     .logo-image {
-      height: 32px;
+      height: 28px;
       width: auto;
       object-fit: contain;
     }
@@ -74,17 +67,16 @@ const t = useTranslations(Astro.currentLocale || 'es');
 
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
     
     a {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-family: system-ui, -apple-system, sans-serif;
-      color: #a1a1aa;
+      color: #94a3b8;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s ease;
-      letter-spacing: 0.3px;
       
       &:hover {
         color: #ffffff;
@@ -98,8 +90,7 @@ const t = useTranslations(Astro.currentLocale || 'es');
   }
 
   @media (max-width: 768px) {
-    .nav-pill { gap: 1rem; padding: 0.75rem 1.25rem; }
+    .nav-container { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
-    .brand-link .logo-image { height: 26px; }
   }
 </style>

@@ -5,36 +5,42 @@ const esUrl = isEnglish ? currentPath.replace('/en', '') || '/' : currentPath;
 const enUrl = isEnglish ? currentPath : `/en${currentPath === '/' ? '' : currentPath}`;
 ---
 
-<div class="lang-pill">
-  <a href={esUrl} class={!isEnglish ? 'active' : ''}>ES</a>
-  <a href={enUrl} class={isEnglish ? 'active' : ''}>EN</a>
+<div class="lang-switcher">
+  <a href={esUrl} class={`lang-opt ${!isEnglish ? 'active' : ''}`}>ES</a>
+  <span class="separator">|</span>
+  <a href={enUrl} class={`lang-opt ${isEnglish ? 'active' : ''}`}>EN</a>
 </div>
 
 <style lang="scss">
-  .lang-pill {
+  .lang-switcher {
     display: inline-flex;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 100px;
-    padding: 0.2rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
     
-    a {
-      font-size: 0.7rem;
+    .separator {
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 0.9rem;
+    }
+
+    .lang-opt {
+      font-size: 0.85rem;
       font-weight: 600;
       color: #64748b;
       text-decoration: none;
-      padding: 0.3rem 0.6rem;
-      border-radius: 100px;
-      transition: all 0.2s ease;
+      transition: color 0.2s ease;
+      font-family: system-ui, -apple-system, sans-serif;
       
       &:hover {
-        color: #e2e8f0;
+        color: #cbd5e1;
       }
       
       &.active {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
       }
     }
   }
