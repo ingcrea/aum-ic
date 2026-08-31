@@ -1,45 +1,40 @@
 ---
-/**
- * ⚛️ TIPO: ÁTOMO
- * 🏷️ NOMBRE: LangSwitcher
- */
 const currentPath = Astro.url.pathname;
 const isEnglish = currentPath.startsWith('/en');
 const esUrl = isEnglish ? currentPath.replace('/en', '') || '/' : currentPath;
 const enUrl = isEnglish ? currentPath : `/en${currentPath === '/' ? '' : currentPath}`;
 ---
 
-<div class="atom-lang-switcher">
+<div class="lang-pill">
   <a href={esUrl} class={!isEnglish ? 'active' : ''}>ES</a>
   <a href={enUrl} class={isEnglish ? 'active' : ''}>EN</a>
 </div>
 
 <style lang="scss">
-  .atom-lang-switcher {
+  .lang-pill {
     display: inline-flex;
-    align-items: center;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 0.25rem;
-    gap: 0.25rem;
-
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+    padding: 0.2rem;
+    
     a {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #94a3b8;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #64748b;
       text-decoration: none;
-      padding: 0.4rem 0.6rem;
-      border-radius: 6px;
+      padding: 0.3rem 0.6rem;
+      border-radius: 100px;
       transition: all 0.2s ease;
-      letter-spacing: 0.5px;
-
-      &:hover { color: #fff; }
       
-      &.active { 
+      &:hover {
+        color: #e2e8f0;
+      }
+      
+      &.active {
         background: rgba(255, 255, 255, 0.1);
-        color: #ffffff;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       }
     }
   }

@@ -1,173 +1,109 @@
 ---
-/**
- * 🌍 TIPO: PLANETA
- * 🏷️ NOMBRE: MainHeader
- * 🎯 PROPÓSITO: Navegación principal premium
- */
 import LangSwitcher from '@atoms/LangSwitcher.astro';
 import { useTranslations } from '@i18n/utils';
 const t = useTranslations(Astro.currentLocale || 'es');
 ---
 
 <header class="planet-header">
-  <div class="planet-header__wrapper">
-    <div class="planet-header__logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#paint0_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 17L12 22L22 17" stroke="url(#paint1_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 12L12 17L22 12" stroke="url(#paint2_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <defs>
-            <linearGradient id="paint0_linear" x1="2" y1="7" x2="22" y2="7" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#3B82F6"/>
-              <stop offset="1" stop-color="#8B5CF6"/>
-            </linearGradient>
-            <linearGradient id="paint1_linear" x1="2" y1="19.5" x2="22" y2="19.5" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#3B82F6"/>
-              <stop offset="1" stop-color="#8B5CF6"/>
-            </linearGradient>
-            <linearGradient id="paint2_linear" x1="2" y1="14.5" x2="22" y2="14.5" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#3B82F6"/>
-              <stop offset="1" stop-color="#8B5CF6"/>
-            </linearGradient>
-          </defs>
+  <nav class="nav-pill">
+    <!-- Logo Minimalista -->
+    <a href="#" class="brand-link">
+      <div class="logo-mark">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.9)"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="rgba(255,255,255,0.5)"/>
+          <path d="M2 12h20" stroke="rgba(255,255,255,0.2)"/>
         </svg>
       </div>
-      <div class="logo-text">
-        <span class="arch">AUM-IC</span>
-        <span class="brand">BY INGENIERÍA CREATIVA</span>
-      </div>
-    </div>
+      <span class="brand-name">AUM-IC</span>
+    </a>
     
-    <nav class="planet-header__nav">
-      <a href="#" class="nav-link">{t('nav.home')}</a>
-      <a href="#docs" class="nav-link">{t('nav.docs')}</a>
-      <a href="#" class="nav-link">{t('nav.contact')}</a>
-      <div class="divider"></div>
+    <!-- Enlaces (Ocultos en móvil) -->
+    <div class="nav-links">
+      <a href="#">{t('nav.home')}</a>
+      <a href="#docs">{t('nav.docs')}</a>
+      <a href="https://github.com/ingcrea" target="_blank">GitHub</a>
+    </div>
+
+    <!-- Acciones -->
+    <div class="nav-actions">
       <LangSwitcher />
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 
 <style lang="scss">
   .planet-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: fixed;
+    top: 1.5rem;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 1rem 2rem;
-    background: rgba(10, 10, 15, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    padding: 0 1rem;
+    pointer-events: none; /* Deja clickear a través de las esquinas */
+  }
 
-    &__wrapper {
+  .nav-pill {
+    pointer-events: auto; /* Rehabilita clicks en la pastilla */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    background: rgba(12, 12, 12, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    padding: 0.6rem 1.2rem;
+    border-radius: 100px; /* Borde circular perfecto */
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    
+    .logo-mark {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
+      color: #fff;
     }
 
-    &__logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-
-      &:hover {
-        transform: translateY(-1px);
-      }
-
-      .logo-icon {
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        padding: 6px;
-      }
-
-      .logo-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .arch {
-          font-size: 1.1rem;
-          font-weight: 800;
-          letter-spacing: -0.5px;
-          color: #ffffff;
-          line-height: 1.1;
-        }
-
-        .brand {
-          font-size: 0.65rem;
-          font-weight: 600;
-          color: #94a3b8;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-        }
-      }
+    .brand-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #fff;
     }
+  }
 
-    &__nav {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    
+    a {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
       
-      .nav-link {
-        font-size: 0.95rem;
-        color: #94a3b8;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.2s ease;
-        position: relative;
-        
-        &:hover {
-          color: #ffffff;
-        }
-        
-        &::after {
-          content: '';
-          position: absolute;
-          width: 0%;
-          height: 2px;
-          bottom: -4px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-          transition: width 0.3s ease;
-          border-radius: 2px;
-        }
-
-        &:hover::after {
-          width: 100%;
-        }
-      }
-
-      .divider {
-        width: 1px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.15);
-        margin: 0 0.5rem;
+      &:hover {
+        color: #fff;
       }
     }
   }
 
-  /* Responsive simplificado */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+  }
+
   @media (max-width: 768px) {
-    .planet-header {
-      padding: 1rem;
-      &__nav {
-        display: none; /* Ocultar menú en móviles por ahora para el boilerplate */
-      }
-    }
+    .nav-pill { gap: 1rem; }
+    .nav-links { display: none; }
   }
 </style>
