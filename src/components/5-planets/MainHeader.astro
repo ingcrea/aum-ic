@@ -9,6 +9,7 @@ const t = useTranslations(Astro.currentLocale || 'es');
     <!-- Logo Oficial IngCrea -->
     <a href="#" class="brand-link">
       <img src="/logo-ic.webp" alt="Ingeniería Creativa" class="logo-image" />
+      <span class="arch-name">AUM-IC</span>
     </a>
     
     <!-- Enlaces (Ocultos en móvil) -->
@@ -53,15 +54,25 @@ const t = useTranslations(Astro.currentLocale || 'es');
   .brand-link {
     display: flex;
     align-items: center;
+    gap: 1rem;
     text-decoration: none;
     transition: opacity 0.2s;
     
     &:hover { opacity: 0.8; }
     
     .logo-image {
-      height: 28px;
+      height: 38px;
       width: auto;
       object-fit: contain;
+    }
+
+    .arch-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      padding-left: 1rem;
     }
   }
 
