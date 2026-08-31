@@ -28,58 +28,66 @@ const t = useTranslations(Astro.currentLocale || 'es');
 <style lang="scss">
   .planet-header {
     position: fixed;
-    top: 1.5rem;
+    top: 2rem;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     z-index: 9999;
-    padding: 0 1rem;
-    pointer-events: none; /* Deja clickear a través de las esquinas */
+    padding: 0 1.5rem;
+    pointer-events: none;
   }
 
   .nav-pill {
-    pointer-events: auto; /* Rehabilita clicks en la pastilla */
+    pointer-events: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3rem;
-    background: rgba(12, 12, 12, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.05);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    padding: 0.6rem 1.2rem;
-    border-radius: 100px; /* Borde circular perfecto */
+    gap: 3.5rem;
+    
+    background: rgba(18, 18, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    width: 100%;
+    max-width: 900px;
   }
 
   .brand-link {
     display: flex;
     align-items: center;
     text-decoration: none;
+    transition: opacity 0.2s;
+    
+    &:hover { opacity: 0.8; }
     
     .logo-image {
-      height: 24px;
+      height: 32px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
     }
   }
 
   .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: center;
     
     a {
-      font-size: 0.85rem;
-      color: #94a3b8;
+      font-size: 0.9rem;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #a1a1aa;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s ease;
+      letter-spacing: 0.3px;
       
       &:hover {
-        color: #fff;
+        color: #ffffff;
       }
     }
   }
@@ -90,7 +98,8 @@ const t = useTranslations(Astro.currentLocale || 'es');
   }
 
   @media (max-width: 768px) {
-    .nav-pill { gap: 1rem; }
+    .nav-pill { gap: 1rem; padding: 0.75rem 1.25rem; }
     .nav-links { display: none; }
+    .brand-link .logo-image { height: 26px; }
   }
 </style>
