@@ -1,12 +1,23 @@
 {
   "site": {
-    "title": "Ingeniería Creativa",
-    "description": "Desarrollo de software de élite y diseño web corporativo."
+    "title": "AUM-IC | Arquitectura Cósmica",
+    "description": "Boilerplate Oficial de la Arquitectura de Universos Multidimensionales por Ingeniería Creativa."
   },
-  "nav": {
-    "home": "Inicio",
-    "about": "Nosotros",
-    "services": "Servicios",
-    "contact": "Contacto"
+  "hero": {
+    "badge": "Estándar Enterprise 2026",
+    "title": "Arquitectura AUM-IC",
+    "subtitle": "Universo Multidimensional de Ingeniería Creativa",
+    "description": "El marco de trabajo definitivo para Astro. Sin clases basura, sin código espagueti. 100% SCSS, Diseño Atómico y MVC.",
+    "cta_primary": "Leer Documentación",
+    "cta_secondary": "GitHub"
+  },
+  "features": {
+    "title": "La Escala Cósmica",
+    "atom_title": "1. Átomos",
+    "atom_desc": "La unidad indivisible. Botones, Inputs, Textos.",
+    "planet_title": "5. Planetas",
+    "planet_desc": "Grandes secciones que estructuran la cuadrícula web.",
+    "galaxy_title": "7. Galaxias (MVC)",
+    "galaxy_desc": "Páginas enrutadoras que consumen la base de datos."
   }
 }

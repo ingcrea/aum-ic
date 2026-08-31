@@ -4,12 +4,11 @@
  * 🏷️ NOMBRE: HomePage (index)
  * 
  * 🎯 PROPÓSITO:
- * Punto de entrada principal (Landing) en el idioma base.
- * Obtiene los textos desde i18n y estructura la vista inyectando 
- * los datos en el Sistema Solar (BaseLayout).
+ * Página de aterrizaje del Boilerplate AUM-IC.
  */
 
 import BaseLayout from '@layouts/BaseLayout.astro';
+import HeroWelcome from '@planets/HeroWelcome.astro';
 import { useTranslations } from '@i18n/utils';
 
 const t = useTranslations('es');
@@ -19,8 +18,25 @@ const t = useTranslations('es');
   title={t('site.title')} 
   description={t('site.description')}
 >
-  {/* AQUI IRÍAN LOS PLANETAS COMO <MainHeader />, <HeroSection />, etc. */}
-  <main style="display: flex; height: 100vh; align-items: center; justify-content: center;">
-    <h1>Bienvenidos a la Arquitectura AUM-IC 🚀</h1>
+  <main>
+    <HeroWelcome />
+    
+    <section id="docs" style="max-width: 800px; margin: 4rem auto; padding: 2rem; color: #fff;">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center; color: #60a5fa;">Estructura del Universo</h2>
+      <div style="display: grid; gap: 1.5rem;">
+        <div style="background: #1e1e2f; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #3b82f6;">
+          <h3>{t('features.atom_title')}</h3>
+          <p style="color: #94a3b8; margin-top: 0.5rem;">{t('features.atom_desc')}</p>
+        </div>
+        <div style="background: #1e1e2f; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #a855f7;">
+          <h3>{t('features.planet_title')}</h3>
+          <p style="color: #94a3b8; margin-top: 0.5rem;">{t('features.planet_desc')}</p>
+        </div>
+        <div style="background: #1e1e2f; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #10b981;">
+          <h3>{t('features.galaxy_title')}</h3>
+          <p style="color: #94a3b8; margin-top: 0.5rem;">{t('features.galaxy_desc')}</p>
+        </div>
+      </div>
+    </section>
   </main>
 </BaseLayout>
