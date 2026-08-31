@@ -1,0 +1,17 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@atoms/*": ["src/components/1-atoms/*"],
+      "@molecules/*": ["src/components/2-molecules/*"],
+      "@cells/*": ["src/components/3-cells/*"],
+      "@organisms/*": ["src/components/4-organisms/*"],
+      "@planets/*": ["src/components/5-planets/*"],
+      "@layouts/*": ["src/6-layouts/*"],
+      "@models/*": ["src/models/*"],
+      "@i18n/*": ["src/i18n/*"],
+      "@styles/*": ["src/styles/*"]
+    }
+  }
+}

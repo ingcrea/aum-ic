@@ -1,0 +1,56 @@
+---
+/**
+ * ⚛️ TIPO: ÁTOMO
+ * 🏷️ NOMBRE: SeoMeta
+ * 
+ * 🎯 PROPÓSITO:
+ * Inyecta todas las etiquetas meta (Title, Description, Open Graph, Twitter Cards).
+ * Hace cumplir el estándar AUM-IC obligando al desarrollador a definir el SEO 
+ * para garantizar 100/100 en posicionamiento.
+ */
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const { 
+  title, 
+  description, 
+  image = '/default-og.webp', 
+  type = 'website' 
+} = Astro.props;
+
+// Construye la URL canónica absoluta (requiere site definido en astro.config)
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
+const ogImageUrl = new URL(image, Astro.url.origin);
+---
+
+{/* Metadatos Globales */}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+
+{/* Canonical URL */}
+<link rel="canonical" href={canonicalURL} />
+
+{/* SEO Primario */}
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+{/* Open Graph / Facebook */}
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageUrl} />
+
+{/* Twitter */}
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImageUrl} />

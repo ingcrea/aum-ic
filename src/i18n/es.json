@@ -1,0 +1,12 @@
+{
+  "site": {
+    "title": "Ingeniería Creativa",
+    "description": "Desarrollo de software de élite y diseño web corporativo."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto"
+  }
+}

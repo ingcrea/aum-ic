@@ -1,0 +1,26 @@
+---
+/**
+ * 🌌 TIPO: GALAXIA (Controlador)
+ * 🏷️ NOMBRE: HomePage (index)
+ * 
+ * 🎯 PROPÓSITO:
+ * Punto de entrada principal (Landing) en el idioma base.
+ * Obtiene los textos desde i18n y estructura la vista inyectando 
+ * los datos en el Sistema Solar (BaseLayout).
+ */
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { useTranslations } from '@i18n/utils';
+
+const t = useTranslations('es');
+---
+
+<BaseLayout 
+  title={t('site.title')} 
+  description={t('site.description')}
+>
+  {/* AQUI IRÍAN LOS PLANETAS COMO <MainHeader />, <HeroSection />, etc. */}
+  <main style="display: flex; height: 100vh; align-items: center; justify-content: center;">
+    <h1>Bienvenidos a la Arquitectura AUM-IC 🚀</h1>
+  </main>
+</BaseLayout>

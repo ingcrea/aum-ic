@@ -1,0 +1,19 @@
+// 🌌 FÍSICA DEL UNIVERSO AUM-IC
+
+// Variables Maestras
+$color-primary: #121212;
+$color-text: #FFFFFF;
+$font-main: system-ui, -apple-system, sans-serif;
+
+// Reseteo Base
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-primary;
+  color: $color-text;
+  font-family: $font-main;
+}

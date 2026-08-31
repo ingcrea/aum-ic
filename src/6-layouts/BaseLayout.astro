@@ -1,0 +1,54 @@
+---
+/**
+ * ☀️ TIPO: SISTEMA SOLAR (Layout)
+ * 🏷️ NOMBRE: BaseLayout
+ * 
+ * 🎯 PROPÓSITO:
+ * Es el esqueleto HTML maestro. Inyecta el idioma correcto, 
+ * obliga al uso de metadatos SEO estrictos y carga el GTM nativo.
+ * 
+ * 🧬 ANATOMÍA (COMPOSICIÓN INTERNA):
+ * - ⚛️ Átomo: <SeoMeta /> (Metadatos dinámicos obligatorios)
+ * - ⚛️ Átomo: <GtmHead /> (Script de Google Tag Manager)
+ * - ⚛️ Átomo: <GtmBody /> (Fallback No-Script de GTM)
+ */
+
+import SeoMeta from '@atoms/SeoMeta.astro';
+import GtmHead from '@atoms/GtmHead.astro';
+import GtmBody from '@atoms/GtmBody.astro';
+import '@styles/global.scss';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  lang?: 'es' | 'en';
+}
+
+const { 
+  title, 
+  description, 
+  image, 
+  lang = Astro.currentLocale || 'es' 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    {/* Inyección Obligatoria de Metadatos */}
+    <SeoMeta title={title} description={description} image={image} />
+    
+    {/* Google Tag Manager (Head) */}
+    <GtmHead />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    {/* Google Tag Manager (Body/NoScript) */}
+    <GtmBody />
+    
+    {/* Aquí las Galaxias inyectan los Planetas */}
+    <slot />
+  </body>
+</html>

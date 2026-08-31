@@ -1,0 +1,12 @@
+{
+  "site": {
+    "title": "Creative Engineering",
+    "description": "Elite software development and corporate web design."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  }
+}

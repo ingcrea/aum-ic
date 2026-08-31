@@ -1,0 +1,21 @@
+{
+  "name": "aum-ic-starter",
+  "version": "1.0.0",
+  "description": "Boilerplate Oficial Marca Blanca de AUM-IC by Ingeniería Creativa",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.2.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.1",
+    "sass": "^1.77.0",
+    "typescript": "^5.5.0"
+  }
+}
