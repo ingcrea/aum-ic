@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import HeroWelcome from '@planets/HeroWelcome.astro';
+import * as Docs from '../../../README.md';
+
+const { Content } = Docs;
+---
+
+<BaseLayout title="AUM-IC | Official Documentation" description="Architectural Manifesto and AUM-IC Standard" lang="en">
+  <main>
+    <HeroWelcome />
+    
+    <section class="docs-container">
+      <article class="markdown-body">
+        <Content />
+      </article>
+    </section>
+  </main>
+</BaseLayout>

@@ -26,3 +26,5 @@
 {"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
 {"message":"[200] / 27ms","label":null,"level":"info"}
 {"message":"/src/styles/global.scss","label":"watch","level":"info"}
+{"message":"/src/components/5-planets/MainHeader.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] / 22ms","label":null,"level":"info"}

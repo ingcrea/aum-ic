@@ -2,22 +2,34 @@
 /**
  * 🌍 TIPO: PLANETA
  * 🏷️ NOMBRE: MainHeader
- * 
- * 🎯 PROPÓSITO:
- * Navegación principal del sitio.
  */
+import LangSwitcher from '@atoms/LangSwitcher.astro';
 import { useTranslations } from '@i18n/utils';
 const t = useTranslations(Astro.currentLocale || 'es');
 ---
 
 <header class="planet-header">
   <div class="planet-header__logo">
-    <span>AUM-IC</span>
+    <svg viewBox="0 0 100 100" class="logo-icon" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#60a5fa" />
+          <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+      </defs>
+      <path d="M20,20 L80,20 L80,40 L60,40 L60,80 L40,80 L40,40 L20,40 Z" fill="url(#ic-grad)"/>
+    </svg>
+    <div class="logo-text">
+      <span class="brand">Ingeniería Creativa</span>
+      <span class="arch">AUM-IC</span>
+    </div>
   </div>
+  
   <nav class="planet-header__nav">
     <a href="#">{t('nav.home')}</a>
     <a href="#docs">{t('nav.docs')}</a>
     <a href="#">{t('nav.contact')}</a>
+    <LangSwitcher />
   </nav>
 </header>
 
@@ -26,24 +38,48 @@ const t = useTranslations(Astro.currentLocale || 'es');
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
-    background: rgba(18, 18, 18, 0.8);
-    backdrop-filter: blur(10px);
+    padding: 1.2rem 3rem;
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
 
-    &__logo span {
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: 2px;
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+
+        .brand {
+          font-size: 0.8rem;
+          color: #94a3b8;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .arch {
+          font-size: 1.4rem;
+          font-weight: 900;
+          color: #f8fafc;
+          line-height: 1;
+        }
+      }
     }
 
     &__nav {
       display: flex;
       gap: 2rem;
+      align-items: center;
       
       a {
         color: #cbd5e1;
