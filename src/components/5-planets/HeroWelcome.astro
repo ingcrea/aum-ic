@@ -12,9 +12,9 @@
  */
 
 import Button from '@atoms/Button.astro';
-import { useTranslations } from '@i18n/utils';
+import { useTranslations, getLangFromLocale } from '@i18n/utils';
 
-const lang = Astro.currentLocale || 'es';
+const lang = getLangFromLocale(Astro.currentLocale);
 const t = useTranslations(lang);
 ---
 

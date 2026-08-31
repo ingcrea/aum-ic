@@ -3,8 +3,8 @@
  * 🌍 TIPO: PLANETA
  * 🏷️ NOMBRE: MainFooter
  */
-import { useTranslations } from '@i18n/utils';
-const t = useTranslations(Astro.currentLocale || 'es');
+import { useTranslations, getLangFromLocale } from '@i18n/utils';
+const t = useTranslations(getLangFromLocale(Astro.currentLocale));
 ---
 
 <footer class="planet-footer">

@@ -9,6 +9,13 @@ export const languages = {
 export const defaultLang = 'es';
 const ui = { es, en };
 
+export function getLangFromLocale(locale: string | undefined): keyof typeof ui {
+  if (locale && locale in ui) {
+    return locale as keyof typeof ui;
+  }
+  return defaultLang;
+}
+
 export function useTranslations(lang: keyof typeof ui) {
   return function t(keys: string) {
     const keysArray = keys.split('.');

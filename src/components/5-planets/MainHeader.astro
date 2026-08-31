@@ -1,7 +1,7 @@
 ---
 import LangSwitcher from '@atoms/LangSwitcher.astro';
-import { useTranslations } from '@i18n/utils';
-const t = useTranslations(Astro.currentLocale || 'es');
+import { useTranslations, getLangFromLocale } from '@i18n/utils';
+const t = useTranslations(getLangFromLocale(Astro.currentLocale));
 ---
 
 <header class="planet-header">
