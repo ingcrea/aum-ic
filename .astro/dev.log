@@ -23,3 +23,6 @@
 {"message":"[200] / 17ms","label":null,"level":"info"}
 {"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
 {"message":"[200] / 24ms","label":null,"level":"info"}
+{"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css","label":"watch","level":"info"}
+{"message":"[200] / 27ms","label":null,"level":"info"}
+{"message":"/src/styles/global.scss","label":"watch","level":"info"}

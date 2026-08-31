@@ -17,3 +17,73 @@ body {
   color: $color-text;
   font-family: $font-main;
 }
+
+// Estilos de la Documentación Viva (Markdown)
+.markdown-body {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.7;
+
+  h1, h2, h3, h4 {
+    color: #f8fafc;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  h1 { font-size: 2.5rem; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 1rem; }
+  h2 { font-size: 2rem; color: #60a5fa; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; }
+  h3 { font-size: 1.5rem; color: #a855f7; }
+
+  p { margin-bottom: 1.2rem; }
+
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    
+    li { margin-bottom: 0.5rem; }
+  }
+
+  strong { color: #fff; }
+
+  code {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #fcd34d;
+  }
+
+  pre {
+    background: #0f0f15;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    
+    code {
+      background: transparent;
+      padding: 0;
+      color: #e2e8f0;
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #94a3b8;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 3rem 0;
+  }
+}

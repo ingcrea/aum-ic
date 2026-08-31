@@ -1,95 +1,31 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroWelcome from '@planets/HeroWelcome.astro';
-import { useTranslations } from '@i18n/utils';
+import * as Docs from '../../README.md';
 
-const t = useTranslations('es');
+const { Content } = Docs;
 ---
 
-<BaseLayout title={t('site.title')} description={t('site.description')}>
+<BaseLayout title="AUM-IC | Documentación Oficial" description="Manifiesto Arquitectónico y Estándar de Programación AUM-IC">
   <main>
     <HeroWelcome />
     
-    <section id="docs" class="docs-section">
-      <h2 class="docs-title">{t('features.title')}</h2>
-      
-      <div class="docs-grid">
-        {[1, 2, 3, 4, 5, 6, 7].map((level) => (
-          <div class={`docs-card level-${level}`}>
-            <h3>{t(`features.f${level}_title`)}</h3>
-            <div class="docs-card-content">
-              <p><strong>Definición:</strong> {t(`features.f${level}_def`)}</p>
-              <p><strong>Ejemplos:</strong> {t(`features.f${level}_ex`)}</p>
-              <p><strong>Regla de Oro:</strong> {t(`features.f${level}_rule`)}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+    <section class="docs-container">
+      <article class="markdown-body">
+        <Content />
+      </article>
     </section>
   </main>
 </BaseLayout>
 
 <style lang="scss">
-  .docs-section {
-    max-width: 1100px;
+  .docs-container {
+    max-width: 900px;
     margin: 4rem auto;
     padding: 2rem;
-  }
-  .docs-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #f8fafc;
-    background: linear-gradient(to right, #60a5fa, #c084fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .docs-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .docs-card {
     background: #1e1e2f;
-    padding: 2rem;
     border-radius: 12px;
-    border-left: 5px solid;
-    transition: transform 0.2s;
-    
-    &:hover { transform: translateX(10px); }
-    
-    h3 {
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding-bottom: 0.5rem;
-    }
-    
-    .docs-card-content {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      
-      p {
-        color: #cbd5e1;
-        line-height: 1.6;
-        font-size: 1.05rem;
-        
-        strong {
-          color: #f8fafc;
-          font-weight: 600;
-        }
-      }
-    }
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.05);
   }
-
-  /* Colores Cósmicos por Nivel */
-  .level-1 { border-color: #3b82f6; } /* Azul Átomo */
-  .level-2 { border-color: #10b981; } /* Verde Molécula */
-  .level-3 { border-color: #f59e0b; } /* Naranja Célula */
-  .level-4 { border-color: #ef4444; } /* Rojo Ser Vivo */
-  .level-5 { border-color: #8b5cf6; } /* Morado Planeta */
-  .level-6 { border-color: #fcd34d; } /* Amarillo Sistema Solar */
-  .level-7 { border-color: #ec4899; } /* Rosa Galaxia */
 </style>
