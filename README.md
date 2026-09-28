@@ -1,121 +1,66 @@
-# 🌌 AUM-IC (Arquitectura de Universos Multidimensionales de Ingeniería Creativa)
+# 🌌 AUM-IC (Architecture of Multidimensional Universes)
 
-**Versión:** 1.0.0
-**Autor:** Ingeniería Creativa (IC)
-**Naturaleza:** Manifiesto Arquitectónico y Estándar de Programación (Clean Architecture)
+> 🌐 **Navigation:** 🇲🇽 [Leer en Español](./README.es.md) &nbsp;|&nbsp; 📜 [Manifesto (EN)](./MANIFEST.md) &nbsp;|&nbsp; 📜 [Manifiesto (ES)](./MANIFEST.es.md)
 
----
+[![Version](https://img.shields.io/badge/version-1.0.0-crimson?style=flat-square)](#)
+[![Nature](https://img.shields.io/badge/nature-Clean%20Architecture%20Standard-38bdf8?style=flat-square)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Built by IngCrea](https://img.shields.io/badge/built%20by-IngCrea-gold?style=flat-square)](https://ingcrea.com)
 
-## 1. Introducción: ¿Qué es AUM-IC?
+**AUM-IC** (Arquitectura de Universos Multidimensionales de Ingeniería Creativa) is not a framework, nor is it a library. It is a **strict architectural standard** designed to build Enterprise-grade web applications that are infinitely scalable, predictable, and maintainable.
 
-**AUM-IC** no es un framework ni una librería; es un **estándar arquitectónico estricto** diseñado para construir aplicaciones web de grado empresarial (Enterprise) que sean infinitamente escalables, predecibles y mantenibles. 
-
-Nace de la necesidad de resolver problemas endémicos en el desarrollo web moderno:
-*   **HTML Ilegible:** Creado por el abuso de frameworks basados en utilidades (como Tailwind CSS) que mezclan el estilo con la estructura.
-*   **Acoplamiento Fuerte:** Componentes que mezclan consultas a bases de datos (SQL/APIs) con renderizado visual.
-*   **Caos de Directorios:** Proyectos donde es imposible saber dónde se ubica un componente o cuál es su nivel de complejidad.
-*   **Mantenimiento Imposible:** Donde cambiar un color corporativo o un texto multi-idioma obliga a reescribir cientos de archivos.
-
-AUM-IC resuelve esto fusionando tres de los conceptos más robustos de la ingeniería de software: **El Patrón MVC (Modelo-Vista-Controlador)**, **Atomic Design (Diseño Atómico)** y **Clean Code (Código Limpio)**, llevándolos a una analogía universal que cualquier desarrollador o Inteligencia Artificial puede comprender al instante.
+Designed by **INGENIERÍA CREATIVA Y DESARROLLOS TECNOLÓGICOS S.A.S. (IngCrea)**, AUM-IC was forged to resolve the endemic problems of modern web development, bringing sanity back to front-end engineering.
 
 ---
 
-## 2. La Escala Cósmica (Estructura de la Vista / Front-end)
+## ⚡ The Problem: Modern Web Chaos
 
-El renderizado de interfaces (La "Vista" en MVC) abandona el desorden y adopta un ensamblaje jerárquico estricto. Un componente superior puede contener a uno inferior, **pero jamás al revés.**
+If you build web applications at scale, you have inevitably faced the collapse of maintainability. AUM-IC annihilates these universal pain points:
 
-Para garantizar el ordenamiento perfecto en cualquier editor de código, los directorios utilizan prefijos numéricos:
+1. **HTML Soup (The Utility Class Nightmare):** The abuse of utility-first frameworks (like Tailwind) that mix visual styling with structure, creating kilometer-long HTML tags that are impossible to read.
+2. **Tight Coupling:** Components that mix database queries (SQL/APIs) with visual rendering, violating the Single Responsibility Principle.
+3. **Directory Chaos:** Projects where it is mathematically impossible to know where a component is located or gauge its level of complexity at a glance.
+4. **Maintenance Paralysis:** Architectures where changing a corporate hex color or a multi-language string forces developers to rewrite hundreds of isolated files.
+
+---
+
+## 🧬 The Solution: A Cosmic Synthesis
+
+AUM-IC resolves these issues by fusing three of the most robust software engineering concepts into a single universal analogy that any developer—or Artificial Intelligence—can instantly understand:
+
+*   **MVC (Model-View-Controller) Pattern**
+*   **Atomic Design Methodology**
+*   **Clean Code Principles**
+
+---
+
+## 📂 The Universal Directory Structure
+
+Under AUM-IC, interface rendering abandons chaos and adopts a strict hierarchical assembly. A higher-level component can contain a lower-level one, **but never the reverse.** 
+
+To guarantee perfect sorting in any code editor, directories use numeric prefixes representing the **Cosmic Scale**:
 
 ```text
 src/
 ├── components/
-│   ├── 1-atoms/         (⚛️ Átomos)
-│   ├── 2-molecules/      (🧬 Moléculas)
-│   ├── 3-cells/          (🦠 Células)
-│   ├── 4-organisms/      (🦖 Seres Vivos)
-│   └── 5-planets/        (🌍 Planetas)
-├── 6-layouts/            (☀️ Sistemas Solares)
-└── pages/                (🌌 Galaxias)
+│   ├── 1-atoms/         (⚛️ Atoms - Buttons, Inputs)
+│   ├── 2-molecules/     (🧬 Molecules - Form Fields)
+│   ├── 3-cells/         (🦠 Cells - Complete Forms)
+│   ├── 4-organisms/     (🦖 Organisms - Complex Interactive Blocks)
+│   └── 5-planets/       (🌍 Planets - Semantic Macro-sections)
+├── 6-layouts/           (☀️ Solar Systems - Master Templates)
+└── pages/               (🌌 Galaxies - Controllers & Routing)
 ```
 
-### ⚛️ Nivel 1: Átomos (`1-atoms/`)
-*   **Definición:** La unidad visual más pequeña e indivisible.
-*   **Ejemplos:** `<Boton />`, `<InputTexto />`, `<Etiqueta />`, `<IconoSVG />`.
-*   **Regla de Oro:** Son 100% ignorantes. No saben en qué página están, no hacen peticiones web, no traducen idiomas. Solo reciben datos visuales (*props*) y los dibujan. Tienen su propio estilo SCSS aislado.
+---
 
-### 🧬 Nivel 2: Moléculas (`2-molecules/`)
-*   **Definición:** La unión de dos o más átomos para construir un componente con propósito.
-*   **Ejemplos:** `<CampoFormulario />` (Combina un Átomo `Etiqueta` + Átomo `InputTexto` + Átomo `TextoError`).
-*   **Regla de Oro:** Comienzan a tener encapsulamiento de interfaz, pero siguen sin poseer lógica de negocio compleja.
+## 📜 Dive into the Doctrine
 
-### 🦠 Nivel 3: Células (`3-cells/`)
-*   **Definición:** Contenedores funcionales completos compuestos por moléculas y átomos.
-*   **Ejemplos:** `<ContactForm />` (Formulario con validación visual y botón de envío).
-*   **Regla de Oro:** Manejan eventos de usuario (clicks, submits) pero delegan el procesamiento profundo a capas superiores.
+The rules of AUM-IC are strict, uncompromising, and highly effective. To understand the physical laws of this architecture—including strict MVC data flow, Scoped SCSS rules, multidimensional i18n, and unbreakable TypeScript standards—you must read the Manifesto.
 
-### 🦖 Nivel 4: Seres Vivos (`4-organisms/`)
-*   **Definición:** Bloques interactivos complejos y altamente independientes. 
-*   **Ejemplos:** `<BloqueSuscripcion />` (Texto de marketing, imagen promocional, y la Célula del formulario).
-*   **Regla de Oro:** Son piezas de software que pueden ser movidas de una página a otra y seguirán funcionando como un organismo autónomo.
-
-### 🌍 Nivel 5: Planetas (`5-planets/`)
-*   **Definición:** Grandes macro-secciones que marcan la división estructural de una página. Corresponden a las etiquetas HTML semánticas (`<header>`, `<footer>`, `<section>`).
-*   **Ejemplos:** `<MainHeader />`, `<HeroSection />`, `<ServicesGrid />`.
-*   **Regla de Oro:** Son el "hogar" de los Seres Vivos y Células. Estructuran la cuadrícula (Grid/Flexbox) general de la sección.
-
-### ☀️ Nivel 6: Sistemas Solares (`6-layouts/`)
-*   **Definición:** Las plantillas maestras o el esqueleto gravitacional. 
-*   **Ejemplos:** `<BaseLayout />`, `<DashboardLayout />`.
-*   **Regla de Oro:** Son los únicos archivos autorizados para contener las etiquetas de raíz HTML (`<html>`, `<head>`, `<body>`). Manejan los metadatos SEO, la importación de tipografías y abren el espacio (el `<slot />`) para que las Galaxias inyecten sus Planetas.
+👉 **[Read the Full Architectural Manifesto (MANIFEST.md)](./MANIFEST.md)**
 
 ---
 
-## 3. La Fuerza de Gravedad: Lógica y Datos (MVC Estricto)
-
-Bajo AUM-IC, está **estrictamente prohibido** que un componente visual consulte una base de datos. La arquitectura debe mantener la filosofía "Clean":
-
-### 💾 El Modelo (`src/models/` o `src/services/`)
-El ADN del universo. Aquí viven las clases, funciones y repositorios de TypeScript puro que interactúan con el mundo exterior (APIs externas, bases de datos SQL/NoSQL, Stripe, etc.). 
-*   **Por qué:** Si el día de mañana Ingeniería Creativa cambia la base de datos de PostgreSQL a MongoDB, solo se modifican los archivos del Modelo. La Vista no se entera ni se rompe.
-
-### 🌌 El Controlador (`src/pages/` - Galaxias)
-En Astro, las páginas actúan como Controladores. 
-*   Su único trabajo es recibir la petición web, llamar al **Modelo** para extraer los datos, inicializar las variables de entorno, decidir qué **Sistema Solar** usar, y pasarle la información. Las Galaxias tienen muy poco código, actuando como directores de orquesta.
-
----
-
-## 4. La Física del Universo: Estilos y SCSS
-
-AUM-IC prohíbe las clases utilitarias aglomeradas en el HTML (Tailwind). En su lugar, utiliza el poder de SCSS y los "Scoped Styles" (Estilos Encapsulados) de Astro.
-
-1.  **Aislamiento (Scoped CSS):** Cada componente (del 1 al 5) maneja su propio estilo. Al compilar, el motor le asigna un código hash único (ej. `class="btn-submit astro-XYZ123"`). **Por qué:** Garantiza matemáticamente que los estilos de un Átomo jamás colisionen con los de otro componente.
-2.  **El Núcleo Global (`src/styles/`):** Existe un único centro de gravedad para el diseño general:
-    *   `_variables.scss`: Colores hex, tipografías, variables de espaciado.
-    *   `_mixins.scss`: Funciones de SCSS para Media Queries (Responsive) y animaciones.
-    *   **Regla:** Prohibido usar colores quemados (`#FFF`) en los componentes. Deben invocar las variables (`$color-primary`). Si la marca hace un rediseño corporativo, se cambia un solo archivo y todo el universo muta instantáneamente.
-
----
-
-## 5. Multidimensionalidad: Internacionalización (i18n)
-
-Hacer una aplicación multi-idioma (multidimensional) suele ser destructivo para el código. AUM-IC lo soluciona aislando los diccionarios.
-
-1.  **Diccionarios (`src/i18n/`):** Todos los textos viven en formatos JSON o TS (ej. `en.json`, `es.json`).
-2.  **Agnosticismo Atómico:** Un Átomo no puede traducir. Si un Botón necesita decir "Enviar", el Planeta o Célula que lo invoca es quien debe leer el diccionario y pasarle la palabra "Enviar" como prop.
-3.  **Consciencia Espacial (Rutas):** Las Galaxias (`/es/contacto`, `/en/contact`) saben en qué idioma están. Utilizan un "Traductor Universal" (`useTranslations(lang)`) para inyectar el idioma correcto hacia abajo, evitando pasar variables en cascada por 6 niveles (Prop Drilling).
-
----
-
-## 6. Estándares Técnicos Inquebrantables
-
-Cualquier proyecto bajo AUM-IC debe pasar por estos filtros de calidad:
-
-*   **Fichas de Anatomía (JSDoc Invisibles):** Todo archivo `.astro` debe iniciar con un comentario explicativo (Tipo, Propósito, Composición). Al escribirse en el bloque del Servidor, este comentario es destruido en la compilación y **jamás llega al HTML del cliente**, protegiendo la propiedad intelectual y reduciendo el peso de transferencia.
-*   **Contratos TypeScript (Interfaces):** Todo componente que reciba datos (Props) debe definir una `interface Props {}` estricta. Si una Molécula exige recibir un `string`, el motor lanzará error si se le pasa un número. Cero sorpresas en producción.
-*   **Alias Absolutos (Path Aliases):** El archivo `tsconfig.json` debe definir atajos (ej. `@atoms/`, `@layouts/`). Está prohibido usar rutas relativas destructivas como `../../../../1-atoms/Boton.astro`.
-*   **Islas de Interatividad (Cero JS por defecto):** El código compilará en HTML/CSS puro ultra rápido. Solo se enviará JavaScript al navegador del usuario usando directivas estrictas (`client:load`, `client:visible`) en los Seres Vivos o Células que realmente lo requieran.
-
----
-
-> *"AUM-IC no es solo escribir código limpio. Es estructurar el universo digital para que escale durante décadas sin colapsar bajo su propia gravedad."*
-> — **Ingeniería Creativa**
+> *"Software is not a product — it is a system of consciousness. Build with the precision of a Swiss watchmaker and the vision of a cosmic architect."*
+> — AUM-IC Doctrine, **Ingeniería Creativa**
