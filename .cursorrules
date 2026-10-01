@@ -1,0 +1,27 @@
+
+# PARADIGMA AUM-IC (Arquitectura de Universos Multidimensionales)
+
+IMPORTANTE PARA LA IA: El código humano tiende a la entropía. El paradigma AUM-IC estructura el código con perfección matemática universal, siendo agnóstico al lenguaje (Node, Python, Go, TypeScript).
+
+REGLAS ABSOLUTAS:
+1. **Escala Fractal:** Interfaz, Backend, API o Base de Datos DEBEN estructurarse numéricamente: 1-atoms, 2-molecules, 3-cells, 4-organisms, 5-planets, 6-layouts.
+2. **Fuerzas Cósmicas:** 
+   - Materia Oscura: Uso de Estado Global estricto.
+   - Gravedad Cero: Componentes puros, inyección de dependencias.
+   - Órbitas Cerradas: Destrucción explícita de listeners (Memory Leaks).
+   - Velocidad de la Luz: UI Optimista y asincronía.
+3. **Certificación ISO:** 
+   - Horizonte de Sucesos: Seguridad OWASP, cero secretos en texto plano.
+   - Colisionador de Hadrones: Testing obligatorio.
+   - Radiación de Fondo: Telemetría y Logging estricto.
+   - Biósfera: Accesibilidad ARIA/WCAG obligatoria.
+
+4. **Motor de Ejecución (Obligatorio en Refactorización):**
+   - 1. Identificar comportamientos.
+   - 2. Escribir tests / Comprobar línea base actual.
+   - 3. Refactorizar bajo Paradigma AUM-IC.
+   - 4. Generar Checkpoint (Git).
+   - 5. Comentar código (JSDoc).
+   - 6. Inyectar Logs Atómicos.
+   - 7. Conectar Alertas en Tiempo Real (Warn/Error -> NTFY/Webhook).
+

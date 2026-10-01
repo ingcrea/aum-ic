@@ -1,0 +1,44 @@
+# AUM-IC 7: El Colisionador de Hadrones (GitHub Actions Template)
+# Instrucciones: Mueve este archivo a .github/workflows/aumic-collider.yml
+
+name: AUM-IC 7 Hadron Collider
+
+on:
+  push:
+    branches: [ "main", "production" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  security-and-integrity:
+    name: 🛡️ Perimeter Security & Integrity
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Clone Universe (Checkout)
+      uses: actions/checkout@v4
+
+    - name: Setup Node/Python/Env
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' # Modificar según el lenguaje del proyecto
+        
+    - name: Install Dependencies
+      run: npm ci
+
+    # 1. EL COLISIONADOR DE SEGURIDAD (Supply Chain Defense)
+    - name: CVE Vulnerability Audit (Magnetic Field Check)
+      run: npm audit --audit-level=high
+      # Si falla aquí, el código no pasa a producción.
+      
+    # 2. RADIACIÓN DE FONDO (Static Analysis)
+    - name: Linter & Typo Physics
+      run: npm run lint
+      
+    # 3. COLISIONES DE MATERIA (Unit Testing)
+    - name: Execute Atom/Molecule Tests
+      run: npm run test
+
+    # 4. COMPILACIÓN ESTRUCTURAL (Zero-Bugs Deploy)
+    - name: Pre-Flight Build Check
+      run: npm run build

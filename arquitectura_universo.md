@@ -34,7 +34,7 @@ src/
 │   ├── 3-cells/          (🦠 Células)
 │   ├── 4-organisms/      (🦖 Seres Vivos)
 │   └── 5-planets/        (🌍 Planetas)
-├── 6-layouts/            (☀️ Sistemas Solares)
+├── layouts/              (☀️ Sistemas Solares)
 └── pages/                (🌌 Galaxias)
 ```
 
@@ -63,7 +63,8 @@ src/
 *   **Ejemplos:** `<MainHeader />`, `<HeroSection />`, `<ServicesGrid />`.
 *   **Regla de Oro:** Son el "hogar" de los Seres Vivos y Células. Estructuran la cuadrícula (Grid/Flexbox) general de la sección.
 
-### ☀️ Nivel 6: Sistemas Solares (`6-layouts/`)
+### ☀️ Nivel 6: Sistemas Solares (`layouts/`)
+*   **Excepción Astro:** Por convención nativa del framework, este nivel omite el prefijo numérico para no romper integraciones de terceros.
 *   **Definición:** Las plantillas maestras o el esqueleto gravitacional. 
 *   **Ejemplos:** `<BaseLayout />`, `<DashboardLayout />`.
 *   **Regla de Oro:** Son los únicos archivos autorizados para contener las etiquetas de raíz HTML (`<html>`, `<head>`, `<body>`). Manejan los metadatos SEO, la importación de tipografías y abren el espacio (el `<slot />`) para que las Galaxias inyecten sus Planetas.
