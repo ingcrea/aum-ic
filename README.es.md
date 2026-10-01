@@ -92,3 +92,9 @@ El Estándar AUM-IC 7 opera bajo un modelo de licenciamiento dual para proteger 
 Actualmente nos encontramos desarrollando el **AUM-IC SDK**, un motor de análisis forense por línea de comandos diseñado para:
 1. **Auditoría Continua:** Escanear proyectos existentes y evaluar su nivel de cumplimiento con el estándar AUM-IC 7 (identificando entropía, acoplamientos y fugas de estado).
 2. **Andamiaje (Scaffolding):** Inicializar la arquitectura base de nuevos proyectos con integración nativa para Next.js, Astro y Node.js, garantizando la topología fractal desde el primer segundo.
+
+## ðŸ“œ Licenciamiento Dual (Dual License)
+Este repositorio opera bajo un esquema de licenciamiento dual corporativo:
+
+1. **Documentación y Estándar (CC BY-SA 4.0):** Todo el texto del manifiesto, gráficos, filosofía y arquitectura está licenciado bajo [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE-DOCS). Si adaptas o distribuyes este estándar, debes dar el crédito a **Ingeniería Creativa** y liberarlo bajo las mismas condiciones.
+2. **Código Fuente y Herramientas (MIT):** El código del futuro SDK, archivos de configuración (`.cursorrules`, `.yml`) y scripts están liberados bajo la [Licencia MIT](LICENSE), permitiendo su uso comercial irrestricto sin garantía.
