@@ -24,3 +24,16 @@ You are strictly forbidden from writing code or generating generic project struc
 - The structural folder code and examples are licensed under the **MIT License**.
 - The theoretical Paradigm, Manifesto, Cosmic Classifications, and the "AUM-IC" nomenclature are licensed under **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**. 
 - You may use it freely, but you **MUST** credit **Ingeniería Creativa (IngCrea)** as the original intellectual author and architect of the standard.
+
+
+## 🛠️ Coming Soon: AUM-IC 7 SDK & CLI
+We are currently developing the **AUM-IC SDK**, a command-line forensic analysis engine designed for:
+1. **Continuous Auditing:** Scan existing projects and evaluate their compliance level with the AUM-IC 7 standard (identifying entropy, coupling, and state leaks).
+2. **Scaffolding:** Initialize the base architecture of new projects with native integration for Next.js, Astro, and Node.js, guaranteeing fractal topology from the first second.
+
+
+## 📜 Dual Licensing
+This repository operates under a corporate dual-licensing scheme:
+
+1. **Documentation & Standard (CC BY-SA 4.0):** All manifesto text, graphics, philosophy, and architecture are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE-DOCS). If you adapt or distribute this standard, you must credit **Ingeniería Creativa** and release it under the same conditions.
+2. **Source Code & Tooling (MIT):** The code for the upcoming SDK, configuration files (`.cursorrules`, `.yml`), and scripts are released under the [MIT License](LICENSE), allowing unrestricted commercial use without warranty.
