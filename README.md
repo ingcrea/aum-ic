@@ -20,6 +20,18 @@ You are strictly forbidden from writing code or generating generic project struc
 2. **[The Roadmap](./ROADMAP_START.md):** The practical execution engine and implementation Cheat Sheet.
 3. **[Tooling (Artefacts):](./ROADMAP_START.md#%EF%B8%8F-tooling-how-to-enforce-the-standard-in-your-project)** The `.cursorrules` and `aumic-pipeline.yml` files to automatically submit your AI and GitHub Pipelines to the rules of AUM-IC.
 
+
+## 🌐 Industry Equivalences (Technical Mapping)
+AUM-IC directly translates to standard enterprise patterns:
+- **Atomic Hierarchy (1-atoms to 6-layouts):** Strict Atomic Design & Clean Architecture layer decoupling.
+- **Dark Matter:** Global state management (Zustand, Redux, Atomic Stores).
+- **Event Horizon:** Perimeter security, strict CSP, CORS, and rate limiting.
+- **Magnetic Field:** Parameterized queries, ORM sanitization, and soft deletes.
+- **The Hadron Collider:** Deterministic CI/CD testing and CVE supply-chain audits.
+- **Wormholes:** Offline-First SQLite/Realm storage and high-speed cache tiers.
+- **The Cosmic Web:** Resilience, Circuit Breakers, and exponential retry loops.
+- **Cosmic Microwave Background:** Real User Monitoring (RUM) and error observability.
+
 ## Licensing
 - The structural folder code and examples are licensed under the **MIT License**.
 - The theoretical Paradigm, Manifesto, Cosmic Classifications, and the "AUM-IC" nomenclature are licensed under **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**. 

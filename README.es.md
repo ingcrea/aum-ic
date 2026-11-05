@@ -23,6 +23,18 @@ Para dominar este paradigma, el repositorio está dividido en tres documentos sa
 
 Diseñado bajo el rigor de **INGENIERÍA CREATIVA Y DESARROLLOS TECNOLÓGICOS S.A.S. (IngCrea)**, AUM-IC fue forjado para resolver los problemas endémicos del desarrollo web moderno, devolviendo la cordura a la ingeniería front-end.
 
+
+## 🌐 Equivalencias con la Industria (Mapeo Técnico)
+AUM-IC se mapea de forma directa con los patrones estándar empresariales:
+- **Jerarquía Atómica (1-atoms a 6-layouts):** Atomic Design estricto y desacoplamiento en capas de Clean Architecture.
+- **Materia Oscura:** Gestión de estado global (Zustand, Redux, Stores Atómicos).
+- **Horizonte de Sucesos:** Seguridad perimetral, CSP estricto, CORS y control de tasa (rate limiting).
+- **Campo Magnético:** Consultas parametrizadas, saneamiento ORM y borrado lógico (soft deletes).
+- **Colisionador de Hadrones:** Testing determinista en CI/CD y auditoría de vulnerabilidades CVE.
+- **Agujeros de Gusano:** Almacenamiento Offline-First con SQLite/Realm y capas de caché rápida.
+- **Red Cósmica:** Resiliencia, disyuntores (Circuit Breakers) y reintentos con backoff exponencial.
+- **Fondo Cósmico de Microondas:** Monitoreo de usuario real (RUM) y observabilidad forense.
+
 ---
 
 ## ⚡ El Problema: El Caos Web Moderno
@@ -34,6 +46,18 @@ Si construyes aplicaciones web a gran escala, inevitablemente has enfrentado el 
 3. **Caos de Directorios:** Proyectos donde es matemáticamente imposible saber dónde se ubica un componente o medir su nivel de complejidad a simple vista.
 4. **Parálisis de Mantenimiento:** Arquitecturas donde cambiar un color corporativo o un texto multi-idioma obliga a los desarrolladores a reescribir cientos de archivos aislados.
 
+
+## 🌐 Equivalencias con la Industria (Mapeo Técnico)
+AUM-IC se mapea de forma directa con los patrones estándar empresariales:
+- **Jerarquía Atómica (1-atoms a 6-layouts):** Atomic Design estricto y desacoplamiento en capas de Clean Architecture.
+- **Materia Oscura:** Gestión de estado global (Zustand, Redux, Stores Atómicos).
+- **Horizonte de Sucesos:** Seguridad perimetral, CSP estricto, CORS y control de tasa (rate limiting).
+- **Campo Magnético:** Consultas parametrizadas, saneamiento ORM y borrado lógico (soft deletes).
+- **Colisionador de Hadrones:** Testing determinista en CI/CD y auditoría de vulnerabilidades CVE.
+- **Agujeros de Gusano:** Almacenamiento Offline-First con SQLite/Realm y capas de caché rápida.
+- **Red Cósmica:** Resiliencia, disyuntores (Circuit Breakers) y reintentos con backoff exponencial.
+- **Fondo Cósmico de Microondas:** Monitoreo de usuario real (RUM) y observabilidad forense.
+
 ---
 
 ## 🧬 La Solución: Una Síntesis Cósmica
@@ -43,6 +67,18 @@ AUM-IC resuelve estos problemas fusionando tres de los conceptos más robustos d
 *   **El Patrón MVC (Modelo-Vista-Controlador)**
 *   **La Metodología Atomic Design (Diseño Atómico)**
 *   **Los Principios de Clean Code (Código Limpio)**
+
+
+## 🌐 Equivalencias con la Industria (Mapeo Técnico)
+AUM-IC se mapea de forma directa con los patrones estándar empresariales:
+- **Jerarquía Atómica (1-atoms a 6-layouts):** Atomic Design estricto y desacoplamiento en capas de Clean Architecture.
+- **Materia Oscura:** Gestión de estado global (Zustand, Redux, Stores Atómicos).
+- **Horizonte de Sucesos:** Seguridad perimetral, CSP estricto, CORS y control de tasa (rate limiting).
+- **Campo Magnético:** Consultas parametrizadas, saneamiento ORM y borrado lógico (soft deletes).
+- **Colisionador de Hadrones:** Testing determinista en CI/CD y auditoría de vulnerabilidades CVE.
+- **Agujeros de Gusano:** Almacenamiento Offline-First con SQLite/Realm y capas de caché rápida.
+- **Red Cósmica:** Resiliencia, disyuntores (Circuit Breakers) y reintentos con backoff exponencial.
+- **Fondo Cósmico de Microondas:** Monitoreo de usuario real (RUM) y observabilidad forense.
 
 ---
 
@@ -64,6 +100,18 @@ src/
 └── pages/               (🌌 Galaxias - Controladores y Rutas)
 ```
 
+
+## 🌐 Equivalencias con la Industria (Mapeo Técnico)
+AUM-IC se mapea de forma directa con los patrones estándar empresariales:
+- **Jerarquía Atómica (1-atoms a 6-layouts):** Atomic Design estricto y desacoplamiento en capas de Clean Architecture.
+- **Materia Oscura:** Gestión de estado global (Zustand, Redux, Stores Atómicos).
+- **Horizonte de Sucesos:** Seguridad perimetral, CSP estricto, CORS y control de tasa (rate limiting).
+- **Campo Magnético:** Consultas parametrizadas, saneamiento ORM y borrado lógico (soft deletes).
+- **Colisionador de Hadrones:** Testing determinista en CI/CD y auditoría de vulnerabilidades CVE.
+- **Agujeros de Gusano:** Almacenamiento Offline-First con SQLite/Realm y capas de caché rápida.
+- **Red Cósmica:** Resiliencia, disyuntores (Circuit Breakers) y reintentos con backoff exponencial.
+- **Fondo Cósmico de Microondas:** Monitoreo de usuario real (RUM) y observabilidad forense.
+
 ---
 
 ## 📜 Sumérgete en el Paradigma
@@ -72,10 +120,34 @@ Las reglas de AUM-IC son estrictas, intransigentes y altamente efectivas. Para e
 
 👉 **[Leer el Manifiesto Arquitectónico Completo (MANIFEST.es.md)](./MANIFEST.es.md)**
 
+
+## 🌐 Equivalencias con la Industria (Mapeo Técnico)
+AUM-IC se mapea de forma directa con los patrones estándar empresariales:
+- **Jerarquía Atómica (1-atoms a 6-layouts):** Atomic Design estricto y desacoplamiento en capas de Clean Architecture.
+- **Materia Oscura:** Gestión de estado global (Zustand, Redux, Stores Atómicos).
+- **Horizonte de Sucesos:** Seguridad perimetral, CSP estricto, CORS y control de tasa (rate limiting).
+- **Campo Magnético:** Consultas parametrizadas, saneamiento ORM y borrado lógico (soft deletes).
+- **Colisionador de Hadrones:** Testing determinista en CI/CD y auditoría de vulnerabilidades CVE.
+- **Agujeros de Gusano:** Almacenamiento Offline-First con SQLite/Realm y capas de caché rápida.
+- **Red Cósmica:** Resiliencia, disyuntores (Circuit Breakers) y reintentos con backoff exponencial.
+- **Fondo Cósmico de Microondas:** Monitoreo de usuario real (RUM) y observabilidad forense.
+
 ---
 
 > *"El software no es un producto, es un sistema de consciencia. Construye con la precisión de un relojero suizo y la visión de un arquitecto del cosmos."*
 > — Estándar AUM-IC, **Ingeniería Creativa**
+
+
+## 🌐 Equivalencias con la Industria (Mapeo Técnico)
+AUM-IC se mapea de forma directa con los patrones estándar empresariales:
+- **Jerarquía Atómica (1-atoms a 6-layouts):** Atomic Design estricto y desacoplamiento en capas de Clean Architecture.
+- **Materia Oscura:** Gestión de estado global (Zustand, Redux, Stores Atómicos).
+- **Horizonte de Sucesos:** Seguridad perimetral, CSP estricto, CORS y control de tasa (rate limiting).
+- **Campo Magnético:** Consultas parametrizadas, saneamiento ORM y borrado lógico (soft deletes).
+- **Colisionador de Hadrones:** Testing determinista en CI/CD y auditoría de vulnerabilidades CVE.
+- **Agujeros de Gusano:** Almacenamiento Offline-First con SQLite/Realm y capas de caché rápida.
+- **Red Cósmica:** Resiliencia, disyuntores (Circuit Breakers) y reintentos con backoff exponencial.
+- **Fondo Cósmico de Microondas:** Monitoreo de usuario real (RUM) y observabilidad forense.
 
 ---
 
