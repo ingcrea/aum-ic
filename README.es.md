@@ -5,11 +5,11 @@
 
 
 ### 🗺️ Mapa de la Documentación Oficial
-Para dominar este paradigma, el repositorio está dividido en tres documentos sagrados:
-1. **[📜 El Manifiesto (MANIFEST.es.md)](./MANIFEST.es.md):** *La Constitución Teórica.* Aquí residen las leyes físicas, los paralelismos cósmicos (Entropía, Multiverso) y el cumplimiento de las normativas ISO. Ideal para Arquitectos y CTOs.
-2. **[🚀 El Roadmap de Inicio (ROADMAP_INICIO.es.md)](./ROADMAP_INICIO.es.md):** *El Manual de Ensamblaje.* Una guía paso a paso, cruda y secuencial. Te lleva de la mano (o a la IA) para crear un proyecto desde cero cumpliendo el paradigma al 100%.
-3. **[🤖 Guía de Agentes (AGENTS.md / .cursorrules)](./AGENTS.md):** *El Control de la Máquina.* Las directivas estrictas que toda Inteligencia Artificial debe inyectarse antes de tocar el código para no generar entropía.
-
+Para dominar este paradigma, el repositorio está dividido en tres documentos sagrados y auditado por el orquestador PUF:
+1. **[📜 El Manifiesto (MANIFEST.es.md)](./MANIFEST.es.md):** *La Constitución Teórica.* Aquí residen las leyes físicas, los paralelismos cósmicos (Entropía, Multiverso) y el cumplimiento de las normativas ISO.
+2. **[🚀 El Roadmap de Inicio (ROADMAP_INICIO.es.md)](./ROADMAP_INICIO.es.md):** *El Manual de Ensamblaje.* Una guía paso a paso, cruda y secuencial para humanos e IAs.
+3. **[🛡️ Matriz AUM-IC PUF (G0 a G22)](https://github.com/ingcrea/aumic-puf):** *El Motor de Verificación Automática.* 23 compuertas de calidad agnóstica que auditan de forma binaria el cumplimiento del estándar.
+4. **[🤖 Guía de Agentes (AGENTS.md / .cursorrules)](./AGENTS.md):** *El Control de la Máquina.* Las directivas estrictas que toda Inteligencia Artificial debe inyectarse.
 
 
 > 🌐 **Navegación:** 🇺🇸 [Read in English](./README.md) &nbsp;|&nbsp; 📜 [Manifiesto (ES)](./MANIFEST.es.md) &nbsp;|&nbsp; 🚀 [Roadmap de Inicio (ES)](./ROADMAP_INICIO.es.md) &nbsp;|&nbsp; 🤖 [Agentes de IA](./AGENTS.md)

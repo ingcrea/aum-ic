@@ -11,8 +11,8 @@ Antes de escribir una sola línea de lógica, crea tu sistema solar.
 ## Paso 2: Encendiendo los Campos Magnéticos (Protección Anti-Ataques)
 Sin importar si creas una web, un Punto de Venta (POS) de escritorio o una App Móvil, los inputs del usuario son radiación mortal.
 1. **El Campo Perimetral (Filtro Invisible):** En web instala **filtros de desafío invisible anti-bots** anti-bots. En Móvil/Desktop, activa validadores biométricos (FaceID) o *Certificate Pinning*.
-2. **El Escudo de Datos (ORM):** Instala tu ORM (Prisma, Entity Framework, CoreData). Está estrictamente prohibido usar "Raw SQL". El ORM atrapará cualquier intento de Inyección SQL local o remota.
-3. **El Validador Atmosférico:** Usa librerías (Zod, FluentValidation) para purificar cadenas, evitar Cross-Site Scripting (XSS) o Buffer Overflows.
+2. **El Escudo de Datos (ORM y Prepared Statements):** Instala tu ORM (Prisma, Entity Framework, CoreData) o Query Builder. Queda terminantemente prohibido usar SQL dinámico concatenado con variables externas. Las consultas deben ser siempre parametrizadas o construidas por el ORM para erradicar cualquier vector de Inyección SQL.
+3. **Validación Atmosférica vs. Mitigación Perimetral:** Usa librerías (Zod, FluentValidation) para tipado y validación de estructura de entrada. La mitigación de XSS se delega a sanitización contextual de renderizado (DOMPurify, auto-escaping) y cabeceras de seguridad CSP.
 
 ## Paso 3: Firmas Espectrales y Agujeros de Gusano (Auth y Caché)
 1. **Autenticación (Firmas):** Configura la generación de **Firmas Espectrales** criptográficas (JWT en web, o uso del `Keychain/Credential Manager` nativo en Móvil/Desktop). Jamás guardes secretos en texto plano.
@@ -31,17 +31,16 @@ Cuando construyas una nueva *feature* o mutación en el código, es OBLIGATORIO 
 3. **Refactorización:** Construye la nueva lógica asegurándote de no romper la estructura numérica fractal (1 a 6) ni el campo magnético.
 4. **Checkpoint Temporal:** Genera un `commit` (Punto de control en el Multiverso).
 5. **Fichas de Anatomía:** Comenta tu código con JSDoc explicando el propósito exacto de tu creación para futuras inteligencias artificiales o ingenieros.
-
 **Fase 2: Observabilidad y Respuesta**
 6. **Telemetría Atómica:** Inyecta logs estructurados en las funciones críticas. Asegúrate de que tu componente actúe como una caja negra, dejando un rastro forense ante cualquier desviación.
-7. **Alerta de Supernova:** Configura o verifica que si tu componente genera un `Warn`, `Error` o `Fatal Error`, el sistema emita instantáneamente la alerta vía Webhook (NTFY, Discord, SMS) al equipo de desarrollo.
+7. **Alerta de Supernova (Telemetría sin Fatiga):** Configura el sistema de observabilidad jerárquica: los avisos (Warn) se agregan como métricas pasivas; únicamente los errores críticos (Error y Fatal) emiten alertas inmediatas con deduplicación por hash de traza (NTFY, Discord, SMS) para prevenir la desensibilización del equipo.
 
 ---
 
 ## 🛠️ CHEAT SHEET DE HERRAMIENTAS (¿Cómo logro todo esto?)
 Para el desarrollador Junior que se pregunta *"¿Cómo implemento estas físicas cósmicas en la vida real?"*, aquí están las tecnologías recomendadas según tu lenguaje:
 
-* **Para el Campo Magnético (ORMs):** Usa `Prisma` o `Drizzle` (TypeScript), `Entity Framework` (C#), `SQLAlchemy` (Python) o `Eloquent` (PHP).
+* **Para el Campo Magnético (ORMs y Consultas Seguras):** Usa `Prisma` o `Drizzle` (TypeScript), `Entity Framework` (C#), `SQLAlchemy` (Python) o `Eloquent` (PHP). Para reportes analíticos de alta exigencia, utiliza SQL nativo estrictamente parametrizado.
 * **Para los Filtros y Seguridad (CSP/WAF):** Usa `Cloudflare Turnstile` en el frontend y librerías como `Helmet` (Node.js) para inyectar cabeceras CSP.
 * **Para el Agujero de Gusano (Caché):** `Redis` (para servidores), `SQLite` o `MMKV` (para persistencia móvil Offline-First).
 * **Para el Colisionador (Testing y CVEs):** `Vitest` o `Jest` para código, `Playwright` para E2E, y siempre corre `npm audit` o `pip audit` en tu GitHub Actions.
@@ -56,7 +55,7 @@ El repositorio incluye archivos de configuración (Artefactos) diseñados para f
 ### 1. La Ley para IAs (`aumic.cursorrules`)
 Las IAs tienden a generar código espagueti si no se les controla. Este archivo somete a tu agente local a las leyes de AUM-IC.
 * **¿Cómo usarlo?** Copia el archivo `aumic.cursorrules` a la carpeta raíz de tu proyecto y renómbralo exactamente a `.cursorrules`.
-* **Efecto:** Tu IDE con Inteligencia Artificial (Cursor, Windsurf, Copilot) leerá las reglas automáticamente. Se le prohibirá usar "Raw SQL", se le exigirá dividir la UI en Átomos/Moléculas y aplicará la seguridad del Horizonte de Sucesos.
+* **Efecto:** Tu IDE con Inteligencia Artificial (Cursor, Windsurf, Copilot, Alex) leerá las reglas automáticamente. Se le prohibirá usar SQL dinámico concatenado, se le exigirá dividir la UI en Átomos/Moléculas y aplicará la seguridad del Horizonte de Sucesos y las compuertas del AUM-IC PUF (G0 a G22).
 
 ### 2. El Colisionador Automatizado (`aumic-pipeline.yml`)
 Plantilla de Integración Continua (CI/CD) para asegurar que el caos no entre a Producción.

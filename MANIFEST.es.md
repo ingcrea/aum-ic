@@ -58,7 +58,7 @@ Un universo estático está muerto. Estas leyes dictan cómo interactúa la mate
 
 ### 🌑 1. Materia Oscura (Manejo del Estado Global)
 * **El Concepto:** Son los datos globales de la aplicación en memoria (Redux, Zustand, Daemons).
-* **Uso Práctico:** En lugar de pasar un dato bajando por 10 archivos distintos (*Prop Drilling*), guardas ese dato en la "Materia Oscura". Cualquier archivo lo absorbe directamente. Es la **Fuente Única de Verdad**.
+* **Uso Práctico:** El estado se gobierna en 3 niveles de gravitación: 1) *Estado Atómico/Local* (UI efímera del componente), 2) *Estado Contextual/Compartido* (módulo o feature delimitado) y 3) *Materia Oscura / Estado Global* (datos transversales como autenticación, sesión y configuración de plataforma). Evita el *Prop Drilling* desmedido sin inflar el estado global innecesariamente.
 * **Estándar ISO:** Mantenibilidad y Modularidad.
 
 ### 🧲 2. Gravedad Cero (Acoplamiento)
@@ -99,7 +99,7 @@ Para que un proyecto sea considerado formalmente AUM-IC, debe cumplir con los 4 
 * **Las Normas:** ISO/IEC 27001 (Seguridad) e ISO/IEC 27701 (Privacidad de la Información).
 * **El Horizonte y La Singularidad:** Las contraseñas y secretos viven en el Backend (Horizonte). La "Privacy by Design" comprime y cifra identidades para que nadie pueda ver datos en claro (Singularidad).
 * **Firmas Espectrales (Auth y JWT):** Cada petición debe portar una "Firma Espectral" validada criptográficamente (JWT, Sesiones con Cookies `HttpOnly`). Si un viajero presenta una firma alterada, el Middleware rechaza la conexión instantáneamente.
-* **Campos Magnéticos (ORMs y Sanitización):** Así como el campo magnético de la Tierra desvía la radiación solar mortal, el uso estricto de **ORMs (Object-Relational Mapping)** y validadores (ej. Zod) actúa como un escudo magnético. Atrapa, filtra y desvía caracteres maliciosos e Inyecciones SQL o XSS antes de que toquen el núcleo de la base de datos. Está estrictamente prohibido apagar el campo magnético ejecutando "Raw SQL" con inputs de usuario.
+* **Campos Magnéticos (ORMs, Prepared Statements y Sanitización):** Así como el campo magnético de la Tierra desvía la radiación solar mortal, el uso estricto de **ORMs (Object-Relational Mapping)**, Query Builders tipados o **consultas preparadas y parametrizadas (Prepared Statements)** actúa como un escudo magnético infranqueable. Queda estrictamente prohibida la concatenación dinámica directa de variables externas en sentencias SQL. El SQL nativo parametrizado está formalmente autorizado para agregaciones complejas y reportes analíticos con justificación técnica registrada en bitácora (ADR).
 
 ### 💥 2. El Colisionador de Hadrones (Testing y Calidad)
 * **La Norma:** ISO/IEC/IEEE 29119 (Pruebas de Software).
@@ -107,7 +107,7 @@ Para que un proyecto sea considerado formalmente AUM-IC, debe cumplir con los 4 
 
 ### 📡 3. Radiación de Fondo Cósmica (Observabilidad y Auditoría)
 * **La Norma:** SOC 2 Tipo II (Integridad de Procesamiento y Disponibilidad).
-* **Uso Práctico:** El Big Bang dejó un rastro que nos cuenta la historia del universo. Del mismo modo, todo error, acción del usuario o caída del servidor deja un **Rastro Radiactivo inmutable** (Telemetría, Sentry, Datadog, Audit Logs). Es imposible silenciar fallos; todo debe ser rastreable forensemente. Esto incluye la observabilidad del cliente (**RUM - Real User Monitoring**), capturando globalmente excepciones del navegador, recursos rotos (404) y *Dead Clicks* (botones inactivos) enviando el rastro instantáneamente al centro de mando.
+* **Uso Práctico:** El Big Bang dejó un rastro que nos cuenta la historia del universo. Del mismo modo, todo error, acción del usuario o caída del servidor deja un **Rastro Radiactivo inmutable** (Telemetría, Sentry, Datadog, Audit Logs). Es imposible silenciar fallos; todo debe ser rastreable forensemente. Esto incluye la observabilidad del cliente (**RUM - Real User Monitoring**), capturando globalmente excepciones del navegador, recursos rotos (404) y *Dead Clicks* (botones inactivos). Para mitigar la fatiga de alertas (*Alert Fatigue*), los eventos se jerarquizan: Debug/Info permanecen en buffer rotativo local, Warns se agregan métricamente sin push sonoro, y únicamente los errores de nivel Error y Fatal disparan notificaciones instantáneas con deduplicación por hash de traza.
 
 ### 🌍 4. La Biósfera y el Espectro Invisible (Accesibilidad y SEO)
 * **La Norma:** ISO/IEC 40500 (Pautas de Accesibilidad WCAG) y Directrices de Motores de Búsqueda (SEO).
@@ -161,7 +161,7 @@ Para que AUM-IC 7 no sea visto como un capricho estético, todo arquitecto debe 
 
 * **¿Por qué y cuándo encender el Campo Magnético (ORMs o Query Builders)?**
   * *Cuándo:* Siempre que el software (Web, POS o App) interactúe con una base de datos o sistema de archivos.
-  * *Por qué:* Escribir consultas "Raw SQL" (SQL crudo) combinadas con variables del usuario es apagar el campo magnético de tu planeta. Los rayos cósmicos (Inyecciones SQL) freirán tu núcleo, ya sea en un clúster en la nube o en la base local de SQLite de la caja registradora. El ORM actúa como una magnetósfera que purifica los comandos maliciosos antes de que toquen el disco. Además, la materia nunca se destruye: se exige el **Borrado Lógico (Soft Deletes)** y el control estricto de esquemas mediante Archivos de Migración.
+  * *Por qué:* Concatenar variables externas en sentencias SQL crudas es apagar el campo magnético de tu sistema: expone el núcleo a inyecciones SQL destructivas. El uso de ORMs, Query Builders tipados y consultas preparadas parametrizadas actúa como la magnetósfera que aísla y neutraliza los payloads maliciosos. El SQL nativo es admisible cuando está estrictamente parametrizado (Prepared Queries) para casos de optimización o agregación compleja justificados en el ADR. Además, la materia nunca se destruye: se exige el **Borrado Lógico (Soft Deletes)** y el control inmutable de esquemas mediante Archivos de Migración.
 
 * **¿Por qué y cuándo hacer un Commit (Punto de Control en el Multiverso)?**
   * *Cuándo:* Jamás al final del día por costumbre. Se hace **cada vez que un átomo o ruta alcanza la estabilidad matemática (Test en verde)**.
